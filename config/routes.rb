@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/:id/cursos', to:'cursos#index'
   get '/:id/files', to:'contributors_files#index'
+  post '/files', to:'cursos#add_file'
 end

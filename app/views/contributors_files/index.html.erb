@@ -1,3 +1,10 @@
+
+<%= form_tag '/files', multipart: true do %>
+  <%= file_field_tag "tag" %>
+  <%= hidden_field_tag :ramo, params[:id] %>
+  <%= submit_tag "submit" %>
+<% end %>
+
 <div style="padding-top: 30px;width: 50%; height: auto; margin:0 auto;display: block">
   <% @files.each do |f| %>
     <div class="file-item">
