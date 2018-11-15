@@ -1,0 +1,20 @@
+<div style="padding-top: 30px;width: 60%; height: auto; margin: 0 auto;">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Carrera</th>
+      <th style="text-align: center">Cantidad de Archivos</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @cursos.each do |c| %>
+      <tr>
+        <td><%= c.name %></td>
+        <td style="text-align: center"><%= c.contributor_files.length %></td>
+        <td><a style="color:white" href="/<%= c.id %>/files" class="btn btn-primary">Archivos</a></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

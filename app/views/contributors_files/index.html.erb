@@ -1,0 +1,11 @@
+<div style="padding-top: 30px;width: 50%; height: auto; margin:0 auto;display: block">
+  <% @files.each do |f| %>
+    <div class="file-item">
+      <iframe src="<%= f.the_file.url %>" type='application/pdf'></iframe>
+      <p><%= f.name %></p>
+      <div style="text-align: center;margin-bottom: 5px;color:#007bff;">
+        <a target="_blank" href="<%= f.the_file.url %>">Ver</a><br><a target="_blank" href="<%= f.the_file.url %>" download>Descargar</a>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,2 @@
+module ContributorsFilesHelper
+end
